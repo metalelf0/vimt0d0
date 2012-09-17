@@ -7,6 +7,8 @@
 ![smyck](http://metalelf0.github.com/images/vimt0d0-screens/smyck.jpg)
 ![tutticolori](http://metalelf0.github.com/images/vimt0d0-screens/tutticolori.jpg)
 
+From top-left, clockwise: Codeschool, Rootwater, Tutticolori, Smyck
+
 ## Usage
 
 This syntax highlighting supports three different formats for todo
