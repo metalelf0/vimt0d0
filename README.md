@@ -2,10 +2,10 @@
 
 ## Screenshots
 
-![codeschool](metalelf0.github.com/images/vimt0d0-screens/codeschool.jpg)
-![rootwater](metalelf0.github.com/images/vimt0d0-screens/rootwater.jpg)
-![smyck](metalelf0.github.com/images/vimt0d0-screens/smyck.jpg)
-![tutticolori](metalelf0.github.com/images/vimt0d0-screens/tutticolori.jpg)
+![codeschool](http://metalelf0.github.com/images/vimt0d0-screens/codeschool.jpg)
+![rootwater](http://metalelf0.github.com/images/vimt0d0-screens/rootwater.jpg)
+![smyck](http://metalelf0.github.com/images/vimt0d0-screens/smyck.jpg)
+![tutticolori](http://metalelf0.github.com/images/vimt0d0-screens/tutticolori.jpg)
 
 ## Usage
 
