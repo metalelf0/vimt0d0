@@ -1,0 +1,33 @@
+*vimt0d0.txt* Syntax highlighting for TODO lists, Orgmode-like
+
+        Vimt0d0 syntax highlighting by Andrea Schiavini ~
+
+Install                                                    |vimt0d0-install|
+
+This syntax highlighting supports three different formats for todo
+entries:
+
+[ ] new entry
+[...] in progress entry
+[X] complete entry
+
+It uses String, Special and Comment syntax definitions, so it works
+with almost any colorscheme.
+
+It also supports commenting ( `#` char to the end of line) and highlights the
+following words in comments: TODO, FIXME, XXX, NOTE, WTF, and ???.
+
+It automatically works with .t0d0 files. If you want to try it on another
+file, choose this syntax with
+
+:set filetype=vimt0d0
+
+==============================================================================
+0. Install                                                   *vimt0d0-install*
+
+Note: I recommend using Tim Pope's pathogen plugin to install this
+colorscheme. See https://github.com/tpope/vim-pathogen . If you've installed
+pathogen properly you can install vimt0d0 with the following commands:
+
+        $ cd ~/.vim/bundle
+        $ git clone https://github.com/metalelf0/vimt0d0.git
