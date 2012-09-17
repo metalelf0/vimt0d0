@@ -18,9 +18,9 @@ syn keyword celTodo contained TODO FIXME XXX NOTE WTF ???
 syn match celComment "#.*$" contains=celTodo
 
 
-syn match newTodo        /^\[\s\+\].*$/ contains=celComment,celTodo
-syn match inProgressTodo /^\[\.\+\].*$/ contains=celComment,celTodo
-syn match completedTodo  /^\[X\+\].*$/ contains=celComment,celTodo
+syn match newTodo        /^\s*\[\s\+\].*$/ contains=celComment,celTodo
+syn match inProgressTodo /^\s*\[\.\+\].*$/ contains=celComment,celTodo
+syn match completedTodo  /^\s*\[[xX]\+\].*$/ contains=celComment,celTodo
 
 hi def link newTodo                    String
 hi def link completedTodo              Comment
