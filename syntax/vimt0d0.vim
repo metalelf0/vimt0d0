@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language: vimt0d0
 " Maintainer: Andrea Schiavini <metalelf0@gmail.com>
-" Version:  1.0.1
-" Last Change:  2012 Sep 14
+" Version:  1.1
+" Last Change:  2013 Apr 11
 " TODO: Feedback is welcomed.
 
 " Quit when a syntax file is already loaded.
@@ -15,14 +15,14 @@ if !exists("main_syntax")
 endif
 
 syn keyword celTodo contained TODO FIXME XXX NOTE WTF ???
-syn match celComment "#.*$" contains=celTodo
-
-
-syn match newTodo        /^\s*\[\s\+\].*$/ contains=celComment,celTodo
-syn match inProgressTodo /^\s*\[\.\+\].*$/ contains=celComment,celTodo
-syn match completedTodo  /^\s*\[[xX]\+\].*$/ contains=celComment,celTodo
+syn match celComment "[^\\]#.*$" contains=celTodo
+syn region newTodo start=/^\s*\[\s\+\].*$/ end=/^\ze\s*[\[=].*$/ contains=celComment,celTodo
+syn region inProgressTodo start=/^\s*\[\.\+\].*$/ end=/^\ze\s*[\[=].*$/  contains=celComment,celTodo
+syn region completedTodo  start=/^\s*\[[xX]\+\].*$/ end=/^\ze\s*[\[=].*$/ contains=celComment,celTodo
+syn match titleTodo /^\s*=+.*$/
 
 hi def link newTodo                    String
+hi def link titleTodo                  Statement
 hi def link completedTodo              Comment
 hi def link inProgressTodo             Special
 hi def link celTodo Todo
