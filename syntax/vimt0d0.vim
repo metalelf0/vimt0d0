@@ -15,7 +15,7 @@ if !exists("main_syntax")
 endif
 
 syn keyword celTodo contained TODO FIXME XXX NOTE WTF ???
-syn match celComment "///.*$" contains=celTodo
+syn match celComment "[^\\]///.*$" contains=celTodo
 syn region newTodo start=/^\s*\[\s\+\].*$/ end=/^\ze\s*[\[=].*$/ contains=celComment,celTodo
 syn region inProgressTodo start=/^\s*\[\.\+\].*$/ end=/^\ze\s*[\[=].*$/  contains=celComment,celTodo
 syn region completedTodo  start=/^\s*\[[xX]\+\].*$/ end=/^\ze\s*[\[=].*$/ contains=celComment,celTodo
