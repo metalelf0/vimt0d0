@@ -1,25 +1,43 @@
 # vimt0d0 -	Vim syntax highlighting for TODO lists, à-la Orgmode
 
+vimt0d0 is a simple syntax highlighting for TODO lists, with a mix of Orgmode-like syntax and support for "pomodoro"-like micromanagement.
+
 ## Screenshots
 
-![codeschool](http://metalelf0.github.com/images/vimt0d0-screens/codeschool.jpg)
-![rootwater](http://metalelf0.github.com/images/vimt0d0-screens/rootwater.jpg)
-![smyck](http://metalelf0.github.com/images/vimt0d0-screens/smyck.jpg)
-![tutticolori](http://metalelf0.github.com/images/vimt0d0-screens/tutticolori.jpg)
+![apprentice](./screens/apprentice.png)
+![crayon](./screens/crayon.png)
+![papercolor](./screens/papercolor.png)
+![solarized](./screens/solarized.png)
 
-From top-left, clockwise: Codeschool, Rootwater, Tutticolori, Smyck
+From top-left, clockwise: Apprentice, Crayon, Solarized, Papercolor
 
 ## Usage
 
 This syntax highlighting supports three different formats for todo
 entries:
 
-        [ ] new entry
-        [...] in progress entry
-        [X] complete entry
+        [x] Completed Task         > 🍅 🍅 🍅 🍅 🍅 🍅
+        [.] Task in progress       > 🍋 🍋 🍋 🍅 🍅 🍅 🍅 🍅 🍅
+        [ ] Task yet to be started > 🍋 🍋 🍋 🍋
 
 It uses `String`, `Special` and `Comment` syntax definitions, so it works
 with almost any colorscheme.
+
+### Pomodori
+
+I use two icons to distinguish planned pomodori and done pomodori. I'll use the term "lemons" to identify planned (and still not worked) pomodori. Ideally, the workflow is to plan lemons at the beginning of the day, then convert them into pomodori while you work.
+
+Here are the available commands (with respective mappings):
+
+* `<Leader>ts` setup row: adds a `>` marker at the end of the current todo, unless already present (mnemonic: todo setup)
+* `<Leader>tS` setup rows: adds a `>` marker at the end of each todo, unless already present (mnemonic: todo Setup)
+* `<Leader>tp` add pomodoro: adds a 🍅  to current task (mnemonic: todo pomodoro)
+* `<Leader>tP` remove pomodoro: removes a 🍅  from current task (mnemonic: todo Pomodoro)
+* `<Leader>tl` add lemon: adds a 🍋  to current task (mnemonic: todo lemon)
+* `<Leader>tL` remove lemon: removes a 🍋  from current task (mnemonic: todo Lemon)
+* `<Leader>td` do pomodoro: converts a 🍋  into a 🍅  in current task (mnemonic: todo do)
+
+If you also use (and you should) the [vim-easy-align](https://github.com/junegunn/vim-easy-align) plugin, you can align the `>` markers with `:EasyAlign />/`.
 
 ### Comments
 
@@ -35,10 +53,8 @@ file, choose this syntax with
 
 ### Installing
 
-Note: I recommend using Tim Pope's pathogen plugin to install this
-syntax. See [here](https://github.com/tpope/vim-pathogen). If
-you've installed pathogen properly you can install vimt0d0 with the
-following commands:
+You can use this plugin with any `vim-plug` like plugin manager. Just add something like
 
-        $ cd ~/.vim/bundle
-        $ git clone https://github.com/metalelf0/vimt0d0.git
+        Plug 'metalelf0/vimt0d0'
+
+to your vimrc.
