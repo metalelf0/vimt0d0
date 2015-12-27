@@ -9,7 +9,7 @@ vimt0d0 is a simple syntax highlighting for TODO lists, with a mix of Orgmode-li
 ![papercolor](./screens/papercolor.png)
 ![solarized](./screens/solarized.png)
 
-From top-left, clockwise: Apprentice, Crayon, Solarized, Papercolor
+From top to bottom: Apprentice, Crayon, Papercolor, Solarized.
 
 ## Usage
 
